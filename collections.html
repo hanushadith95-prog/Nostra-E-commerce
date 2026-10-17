@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra - Collections</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-gray-900">
+
+    <nav class="bg-slate-900 text-white p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Nostra</h1>
+
+            <div class="flex gap-5 items-center text-sm">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-5 py-10">
+        <h2 class="text-3xl font-bold mb-2">Our Collections</h2>
+        <p class="text-gray-500 mb-7">
+            Explore our latest collection of fashion items.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <aside class="bg-gray-100 p-5 rounded-lg">
+                <h3 class="text-xl font-bold mb-5">Filter Products</h3>
+
+                <h4 class="font-semibold mb-3">Category</h4>
+
+                <label class="block mb-2">
+                    <input type="checkbox" class="category-filter" value="Men">
+                    Men
+                </label>
+
+                <label class="block mb-2">
+                    <input type="checkbox" class="category-filter" value="Women">
+                    Women
+                </label>
+
+                <label class="block mb-2">
+                    <input type="checkbox" class="category-filter" value="Footwear">
+                    Footwear
+                </label>
+
+                <label class="block mb-6">
+                    <input type="checkbox" class="category-filter" value="Accessories">
+                    Accessories
+                </label>
+
+                <h4 class="font-semibold mb-3">Price Range</h4>
+
+                <select id="priceFilter"
+                        class="w-full border p-2 rounded bg-white mb-6">
+                    <option value="all">All Prices</option>
+                    <option value="0-1000">Under ₹1,000</option>
+                    <option value="1000-2000">₹1,000 - ₹2,000</option>
+                    <option value="2000-999999">Above ₹2,000</option>
+                </select>
+
+              
+            </aside>
+
+            <section class="md:col-span-3">
+                <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                    <input type="text"
+                           id="search"
+                           placeholder="Search products..."
+                           class="border p-3 rounded-lg w-full">
+
+                    <select id="sortFilter"
+                            class="border p-3 rounded-lg">
+                        <option value="default">Featured</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+
+                <p id="resultCount" class="text-gray-500 mb-5"></p>
+
+                <div id="productContainer"
+                     class="grid grid-cols-2 lg:grid-cols-3 gap-5">
+
+                    <div class="product-card" data-name="Men's Hoodie" data-category="Men" data-price="1299">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=80" alt="Men's hoodie">
+                        <h3 class="font-semibold mt-3">Men's Hoodie</h3>
+                        <p class="text-gray-500 text-sm">Men</p>
+                        <p class="font-bold mt-1">₹1,299</p>
+                    </div>
+
+                    <div class="product-card" data-name="Women's Sweater" data-category="Women" data-price="1499">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=500&q=80" alt="Women's sweater">
+                        <h3 class="font-semibold mt-3">Women's Sweater</h3>
+                        <p class="text-gray-500 text-sm">Women</p>
+                        <p class="font-bold mt-1">₹1,499</p>
+                    </div>
+
+                    <div class="product-card" data-name="White Sneakers" data-category="Footwear" data-price="2499">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="White sneakers">
+                        <h3 class="font-semibold mt-3">White Sneakers</h3>
+                        <p class="text-gray-500 text-sm">Footwear</p>
+                        <p class="font-bold mt-1">₹2,499</p>
+                    </div>
+
+                    <div class="product-card" data-name="Travel Backpack" data-category="Accessories" data-price="1999">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80" alt="Travel backpack">
+                        <h3 class="font-semibold mt-3">Travel Backpack</h3>
+                        <p class="text-gray-500 text-sm">Accessories</p>
+                        <p class="font-bold mt-1">₹1,999</p>
+                    </div>
+
+                    <div class="product-card" data-name="Black Sunglasses" data-category="Accessories" data-price="899">
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=500&q=80" alt="Black sunglasses">
+                        <h3 class="font-semibold mt-3">Black Sunglasses</h3>
+                        <p class="text-gray-500 text-sm">Accessories</p>
+                        <p class="font-bold mt-1">₹899</p>
+                    </div>
+
+                    <div class="product-card" data-name="Classic Watch" data-category="Accessories" data-price="2999">
+                        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=500&q=80" alt="Classic watch">
+                        <h3 class="font-semibold mt-3">Classic Watch</h3>
+                        <p class="text-gray-500 text-sm">Accessories</p>
+                        <p class="font-bold mt-1">₹2,999</p>
+                    </div>
+
+                    <div class="product-card" data-name="Casual Cap" data-category="Men" data-price="699">
+                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=500&q=80" alt="Casual cap">
+                        <h3 class="font-semibold mt-3">Casual Cap</h3>
+                        <p class="text-gray-500 text-sm">Men</p>
+                        <p class="font-bold mt-1">₹699</p>
+                    </div>
+                </div>
+
+                <p id="noProducts" class="hidden text-center py-12 text-gray-500">
+                    No products found. Try another search or filter.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer bg-slate-900 text-white p-8 mt-10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold">Nostra</h2>
+            <p class="text-gray-300 mt-2">Modern fashion for a better you.</p>
+
+            <div class="flex gap-5 mt-5 text-sm">
+                <a href="index.html">Home</a>
+                <a href="collections.html">Collections</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <hr class="my-5 border-gray-600">
+            <p class="text-sm text-gray-400">
+                © 2026 Nostra. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
